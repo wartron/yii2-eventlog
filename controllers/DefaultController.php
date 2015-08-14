@@ -28,6 +28,7 @@ class DefaultController extends Controller
         return $this->render('timeline', [
             'dataProvider' => $dataProvider,
             'searchModel' => $searchModel,
+            'timeline'  =>  $searchModel->buildTimeline($dataProvider->getModels()),
         ]);
 
     }

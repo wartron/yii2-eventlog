@@ -71,4 +71,34 @@ class EventSearch extends EventlogItem
 
         return $dataProvider;
     }
+
+
+    public function buildTimeline($items)
+    {
+        $timeline_items = [];
+        foreach ($items as $item)
+        {
+            $obj = Yii::createObject(
+                [
+                    'class'     =>  \insolita\wgadminlte\ExampleTimelineItem::className(),
+                    'time'      =>  $item->created_at,
+                    'header'    =>  $item->name,
+                    'body'      =>  $item->data,
+                    'type'      =>  mt_rand(0, 1),
+                ]
+            );
+
+            //$date = $item->created_at;
+            $date = strtotime(date('F j, Y',$item->created_at));
+
+            if(!isset($timeline_items[$date]))
+                $timeline_items[$date] = [];
+
+            $timeline_items[$date][] = $obj;
+        }
+
+        return $timeline_items;
+
+
+    }
 }

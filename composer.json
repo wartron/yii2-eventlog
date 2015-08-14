@@ -13,6 +13,7 @@
     "minimum-stability": "dev",
     "require": {
         "yiisoft/yii2": "~2.0",
+        "insolita/yii2-adminlte-widgets": "*",
         "kartik-v/yii2-helpers": "*"
     },
     "autoload": {
