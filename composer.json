@@ -1,7 +1,7 @@
 {
     "name": "wartron/yii2-eventlog",
     "description": "Yii2 Admin Eventlog Module",
-    "keywords": ["yii2", "yii2-admin", "eventlog", "timeline",],
+    "keywords": ["yii2", "yii2-admin", "eventlog", "timeline"],
     "type": "yii2-extension",
     "license": "MIT",
     "authors": [
