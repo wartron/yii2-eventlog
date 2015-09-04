@@ -5,6 +5,7 @@ namespace wartron\yii2eventlog\models;
 use Exception;
 use Yii;
 use yii\behaviors\TimestampBehavior;
+use wartron\yii2uuid\helpers\Uuid;
 
 /**
  * This is the base-model class for table "file".
@@ -14,7 +15,7 @@ use yii\behaviors\TimestampBehavior;
  * @property string $name
  * @property string $data
  */
-class EventlogItem extends \yii\db\ActiveRecord
+class EventlogItem extends \wartron\yii2uuid\db\ActiveRecord
 {
     const TYPE_EVENT                = 1;
     const TYPE_OBJECT_CREATE        = 10;
@@ -23,6 +24,8 @@ class EventlogItem extends \yii\db\ActiveRecord
 
     const TYPE_USER_REGISTER        = 50;
     const TYPE_USER_PASSWORD_RESET  = 51;
+
+    const SYSTEM_EXCEPTION          = 80;
 
     /**
      * @inheritdoc

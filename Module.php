@@ -1,6 +1,6 @@
 <?php
 
-namespace wartron\yii2eventlog\eventlog;
+namespace wartron\yii2eventlog;
 
 use yii\base\Module as BaseModule;
 use yii\base\InvalidParamException;
@@ -11,7 +11,7 @@ use yii\base\InvalidParamException;
  */
 class Module extends BaseModule
 {
-    const VERSION = '0.0.1-dev';
+    const VERSION = '0.0.3-dev';
 
 
 }
