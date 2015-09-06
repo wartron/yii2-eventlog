@@ -33,8 +33,20 @@ $this->params['breadcrumbs'][] = $this->title;
                     'columns' => [
                         'id',
                         'name',
-                        'type',
-                        'user_id',
+                        [
+                            'attribute' =>  'type',
+                            'filter'    =>  [
+                                1 => 'TYPE_EVENT',
+                                10 => 'TYPE_OBJECT_CREATE',
+                                12 => 'TYPE_OBJECT_UPDATE',
+                                14 => 'TYPE_OBJECT_DELETE',
+                                50 => 'TYPE_USER_REGISTER',
+                                51 => 'TYPE_USER_PASSWORD_RESET',
+                                80 => 'SYSTEM_EXCEPTION',
+
+                            ]
+                        ],
+                        'account_id:hex',
                         [
                             'attribute' =>  'created_at',
                             'format'    =>  'raw',

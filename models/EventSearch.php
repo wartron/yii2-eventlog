@@ -17,8 +17,8 @@ class EventSearch extends EventlogItem
     public function rules()
     {
         return [
-            [['id', 'type', 'user_id', 'read_at', 'created_at'], 'integer'],
-            [['name'], 'safe'],
+            [['id', 'type',  'read_at', 'created_at'], 'integer'],
+            [['name','account_id'], 'safe'],
         ];
     }
 
@@ -63,7 +63,7 @@ class EventSearch extends EventlogItem
             'id' => $this->id,
             'name' => $this->name,
             'type' => $this->type,
-            'user_id' => $this->user_id,
+            'account_id' => $this->account_id,
             'read_at' => $this->read_at,
             'created_at' => $this->created_at,
         ]);
