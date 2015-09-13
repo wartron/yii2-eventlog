@@ -31,7 +31,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     //     'lastPageLabel'  => Yii::t('app', 'Last')
                     // ],
                     'columns' => [
-                        'id',
+                        'id:hex',
                         'name',
                         [
                             'attribute' =>  'type',

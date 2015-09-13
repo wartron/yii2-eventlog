@@ -21,7 +21,7 @@ class m150813_192723_create_eventlog_tables extends Migration
 
 
         $columns = ['id',  'name', 'created_at'];
-        $this->batchInsert('{{%billing_account}}', $columns, [
+        $this->batchInsert('{{%eventlog_item}}', $columns, [
             [
                 hex2bin('713c4ee24d2011e590e90242ac110002'),
                 'eventlog init',
