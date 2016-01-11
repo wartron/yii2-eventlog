@@ -29,6 +29,18 @@ class ErrorAction extends BaseErrorAction
 
             $data['message'] = $exception->getMessage();
 
+
+            $request = Yii::$app->request;
+            if($request){
+
+                $data['request'] = [
+                    'url'       =>  $request->getUrl(),
+                    'cookies'   =>  $request->getCookies(),
+                    'params'    =>  $request->getBodyParams(),
+                ];
+            }
+
+
             // new user Event
             $eli = new EventlogItem();
             $eli->name = "System Exception";
